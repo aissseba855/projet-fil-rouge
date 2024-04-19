@@ -1,0 +1,102 @@
+.form-saisie{
+
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    max-width: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #fff;
+   /* background-color:#f6f6f6 ;*/
+}
+.formInscription{
+    width: 600px;
+    height: 750px;
+    background-color: #de562d;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 30px;
+    border-radius: 25px;
+    border-top: 4px solid #dee1de;
+    border-bottom: 5px solid #f6f8f6;
+    box-shadow: 0 0 10px hsl(0, 8%, 95%);
+}
+.form-text{
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 30px;
+}
+.form-saisie input{
+    width: 100%;
+    font-size: 16px;
+    outline: none;
+    background-color: #f1f1f4;
+    color: 10px 0;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 6px;
+}
+.form-saisie span{
+    font-size: 14px;
+    font-family: bold;
+}
+.form-saisie input[type="submit"]{
+    width: 200px;
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #464acb;
+    color: #fff;
+    margin: 209x 0;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.form-saisie input[type="submit"].btncreate:hover{
+    background-color: #58cb5a;
+    color : #ececf0;  
+}
+
+.btncreate{
+    display: flex;
+}
+.showProfil{
+    width: 400px;
+    height: 500px;
+    background-color: rgb(255, 72, 0);
+    position: absolute;
+    margin: auto;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-left: 70px;
+    border-radius: 15px;
+   
+}
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Animation de transition */
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
