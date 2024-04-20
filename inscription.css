@@ -63,12 +63,40 @@ input{
 }
 #sbt{
 width: 80px;
+background-color: green;
 }
+
+
  #sbt:hover{
-    cursor: pointer;
-    color: white;
+    /*cursor: pointer;*/
+    color: rgb(64, 236, 55);
     font-size: 1em;
-    background: black;
+    background: rgb(255, 255, 255);
     animation: 0.5ms;
     
 }
+.avatar {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px; /* Largeur de l'avatar */
+    height: 100px;
+    border-radius: 50%;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

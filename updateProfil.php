@@ -9,7 +9,7 @@ $telephone =isset($_POST['number'])?$_POST['number']:"";
 $adresse =isset($_POST['adresse'])?$_POST['adresse']:"";
 $profil =isset($_POST['profil'])?$_POST['profil']:"";
 $req=connexion()->prepare('UPDATE apprenants SET Nom=?,Prenom=?,referentiel=?,email=?,telephone=?,adresse=?,profil=? WHERE id_profil= ?');
-$req->execute(array($id_profil,$nom,$prenom,$referentiel,$email,$telephone,$adresse,$profil));
+$req->execute(array($nom,$prenom,$referentiel,$email,$telephone,$adresse,$profil,$id_profil));
 echo "bonjour" + $nom;
 header('location:profil.php');
 ?>

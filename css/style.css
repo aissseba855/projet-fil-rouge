@@ -69,9 +69,7 @@ body{
     display: flex;
 }
 .showProfil{
-    width: 400px;
-    height: 500px;
-    background-color: rgb(255, 72, 0);
+    background-color: #ff7b00;
     position: absolute;
     margin: auto;
     top: 50px;
@@ -79,12 +77,12 @@ body{
     right: 0;
     bottom: 0;
     padding-left: 70px;
-    border-radius: 15px;
+    border-radius: 30px;
    
 }
 .container {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 2%;
 }
 
 .btn {
