@@ -1,7 +1,7 @@
 <?php
-require_once("connexion.php");
+require_once("connect.php");
 $idP = isset($_GET['idP'])?$_GET['idP']:0;
-$req=connexion()->query("SELECT * FROM apprenants WHERE id_profil = $idP");
+$req=$db->prepare("SELECT * FROM apprenants WHERE id_profil = ?");
 $req->execute([$idP]);
 $donnees = $req->fetch();
 ?>

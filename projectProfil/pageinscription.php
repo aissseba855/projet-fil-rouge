@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil Utilisateur</title>
     <link rel="stylesheet" href="./inscription.css">
-    <link rel="shorcut icon" href="./image/logoODC.png">
+    <link rel="shorcut icon" href="logoODC.png">
 </head>
 <body>
     <div class="main">

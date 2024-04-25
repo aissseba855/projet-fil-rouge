@@ -1,7 +1,7 @@
 <?php
- require_once('connexion.php');
+ require_once('connect.php');
 $idP = isset($_GET['id_profil'])?$_GET['id_profil']:0;
- $req=connexion()->query("SELECT * FROM apprenants ORDER BY id_profil DESC LIMIT 1");
+ $req=$db->query("SELECT * FROM apprenants ORDER BY id_profil DESC LIMIT 1");
  $req->execute();
  $donnees=$req->fetch(PDO::FETCH_ASSOC);
  //return($donnees);
@@ -14,9 +14,9 @@ $idP = isset($_GET['id_profil'])?$_GET['id_profil']:0;
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Mon profil </title>
-    <link rel="stylesheet" href="./inscription.css">
+    <link rel="stylesheet" href="inscription.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="shorcut icon" href="./image/logoODC.png">
+    <link rel="shortcut icon" href="image/logoODC.png">
 </head>
 
 <body>
@@ -27,7 +27,7 @@ $idP = isset($_GET['id_profil'])?$_GET['id_profil']:0;
         <h2 style="color:  rgb(0,0, 0); text-align: center;">Informations profil</h2>
         <div class="showProfil" style="width: 85%; height: 85%; ">
             <div>
-                <img src="./image/avatar.png" alt="Avatar" class="avatar">
+                <img src="/image/avatar.png" alt="Avatar" class="avatar">
             </div><br><br><br><br><br>
             <div>
 

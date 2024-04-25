@@ -15,7 +15,7 @@ body{
 .logo{
     width: 100px;
     height: 100px;
-    background: url(./image/logoODC.png) center/cover;
+    background: url(logoODC.png) center/cover;
     border: 2px solid #ff7b00;
     border-radius: 150px;
 }
