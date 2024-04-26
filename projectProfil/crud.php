@@ -1,6 +1,6 @@
 <?php
     require_once('connect.php');
-    $nom=isset($_POST['nom'])?$_POST['nom']:"";
+    $nom=isset($_POST['nom']) ?$_POST['nom']:"";
     $prenom=isset($_POST['prenom'])?$_POST['prenom']:"";
     $referentiel=isset($_POST['referentiel'])?$_POST['referentiel']:"";
     $email=isset($_POST['email'])?$_POST['email']:"";
