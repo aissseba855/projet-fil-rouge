@@ -14,7 +14,9 @@ services:
       image: mysql:8.0
       container_name: mysql8
       command: --default-authentication-plugin=mysql_native_password
-      environment: 
+      volumes:
+         - ./projectProfil/profil_infos.sql:/docker-entrypoint-initdb.d/profil_infos.sql
+       environment: 
          MYSQL_ROOT_PASSWORD: pass
          MYSQL_DATABASE: demo
          MYSQL_USER: test
