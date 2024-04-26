@@ -33,13 +33,7 @@ services:
       #Elle configure le plugin d'authentification par défaut sur "mysql_native_password". 
       #Ce plugin est utilisé pour l'authentification des utilisateurs lors de la connexion à la base de données MySQL.
       command: --default-authentication-plugin=mysql_native_password
-      # Montre les volumes du conteneur.
-      volumes:
-      # Montre le fichier SQL local au répertoire d'initialisation de la base de données du conteneur.
-         - ./projectProfil/profil_infos.sql:/docker-entrypoint-initdb.d/profil_infos.sql
-      # Définit les variables d'environnement pour la base de données.
       environment: 
-         # Mot de passe root MySQL.
          MYSQL_ROOT_PASSWORD: pass
           # Nom de la base de données.
          MYSQL_DATABASE: demo
