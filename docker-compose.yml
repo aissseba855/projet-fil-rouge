@@ -12,7 +12,7 @@ services:
     container_name: php82
     # Configure les ports du conteneur.Mappe le port 8080 de l'hôte au port 80 du conteneur.
     ports:
-      - 8080:80
+      - 8081:80
     # Montre les volumes du conteneur.  
     volumes:
     #Montre le répertoire local 'projectProfil' au répertoire '/var/www/html' dans le conteneur.
