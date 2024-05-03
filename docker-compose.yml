@@ -1,4 +1,4 @@
-#Définit la version de la syntaxe Docker Compose utilisée.
+# Définit la version de la syntaxe Docker Compose utilisée.
 version: '3'
  # Section définissant les services Docker à exécuter.
 services:
