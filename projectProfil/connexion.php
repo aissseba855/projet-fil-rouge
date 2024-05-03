@@ -6,7 +6,7 @@
     function connexion() {
       
         try{
-            $connect=new PDO('mysql:host=localhost;dbname=demo','root','');
+            $connect=new PDO('mysql:host=mysql8;dbname=demo','root','root');
            // echo 'connexion etabli';
         }catch(Exception $e){
         die('Am na fou dokhoul d'.$e->getMessage());
