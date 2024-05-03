@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 --
 -- Structure de la table `apprenants`
 --
-
+USE demo;
 DROP TABLE IF EXISTS `apprenants`;
 CREATE TABLE IF NOT EXISTS `apprenants` (
   `id_profil` int(11) NOT NULL AUTO_INCREMENT,
