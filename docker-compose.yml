@@ -1,9 +1,7 @@
- # Définit la version de la syntaxe Docker Compose utilisée.
+Définit la version de la syntaxe Docker Compose utilisée.
 version: '3'
-
  # Section définissant les services Docker à exécuter.
 services:
-
 # Définit le service PHP.
    php:
    # Utilise l'image Docker PHP 8.2 avec Apache.
@@ -12,7 +10,7 @@ services:
     container_name: php82
     # Configure les ports du conteneur.Mappe le port 8080 de l'hôte au port 80 du conteneur.
     ports:
-      - 8081:80
+      - 80:80
     # Montre les volumes du conteneur.  
     volumes:
     #Montre le répertoire local 'projectProfil' au répertoire '/var/www/html' dans le conteneur.
@@ -33,6 +31,10 @@ services:
       #Elle configure le plugin d'authentification par défaut sur "mysql_native_password". 
       #Ce plugin est utilisé pour l'authentification des utilisateurs lors de la connexion à la base de données MySQL.
       command: --default-authentication-plugin=mysql_native_password
+      volumes:
+# Montre le fichier SQL local au répertoire d'initialisation de la base de données du conteneur.
+         - ./profil_infos.sql:/docker-entrypointinitdb.d/profil_infos.sql
+
       environment: 
          MYSQL_ROOT_PASSWORD: pass
           # Nom de la base de données.
@@ -45,27 +47,3 @@ services:
       ports:
           # Mappe le port 3308 de l'hôte au port 3306 du conteneur.
          - 3308:3306
-
- #Définit le service phpMyAdmin.
-   phpmyadm:
-   # Utilise l'image Docker phpMyAdmin.
-      image: phpmyadmin/phpmyadmin
-      # Nomme le conteneur phpMyAdmin comme 'phpmyadmin'.
-      container_name: phpmyadmin
-      # Définit les variables d'environnement pour phpMyAdmin.
-      environment:
-          #Indique que l'hôte de la base de données peut être spécifié manuellement.
-          PMA_ARBITRARY: 1
-          # Nom du service de la base de données auquel phpMyAdmin se connecte.
-          PMA_HOST: db
-          # Nom d'utilisateur phpMyAdmin.
-          PMA_USER: root
-          # Mot de passe phpMyAdmin.
-          PMA_PASSWORD: pass
-          # Limite de taille de téléchargement pour phpMyAdmin.
-          UPLOAD_LIMIT: 20M
-      # Configure les ports du conteneur.
-      ports:
-      # Mappe le port 8899 de l'hôte au port 80 du conteneur.
-         - 8899:80
-
