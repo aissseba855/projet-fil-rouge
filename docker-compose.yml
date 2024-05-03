@@ -1,5 +1,5 @@
 Définit la version de la syntaxe Docker Compose utilisée.
-version: '3'
+version: '3.8'
  # Section définissant les services Docker à exécuter.
 services:
 # Définit le service PHP.
