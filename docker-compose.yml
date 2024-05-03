@@ -28,7 +28,7 @@ services:
       command: --default-authentication-plugin=mysql_native_password
       volumes:
 # Montre le fichier SQL local au répertoire d'initialisation de la base de données du conteneur.
-         - ./profil_infos.sql:/docker-entrypointinitdb.d/profil_infos.sql
+         - projectProfil/profil_infos.sql:/docker-entrypoint-initdb.d/
 
       environment: 
          MYSQL_ROOT_PASSWORD: pass
