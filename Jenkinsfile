@@ -12,12 +12,12 @@ pipeline {
             }
         }
     }
-    post {
-        success {
-            slackSend channel: '#projetdevops', message: 'code reussi'
-        }
-        failure {
-            slackSend channel: '#projetdevops', message: 'code error'
-        }
-    }
+   // post {
+       // success {
+          //  slackSend channel: '#projetdevops', message: 'code reussi'
+        //}
+        //failure {
+        //    slackSend channel: '#projetdevops', message: 'code error'
+      //  }
+    //}
 }
