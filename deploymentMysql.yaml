@@ -1,0 +1,21 @@
+
+apiVersion: apps/v1  # Version de l'API Kubernetes utilisée
+kind: Deployment  # Type de ressource Kubernetes (un déploiement)
+metadata:  # Métadonnées de la ressource
+  name: mydb-deployment  # Nom du déploiement
+  namespace: default
+spec:  # Spécifications du déploiement
+  replicas: 1  # Nombre de répliques (pods) à maintenir en fonctionnement
+  selector:  # Sélecteur utilisé pour déterminer quels pods sont gérés par ce déploiement
+    matchLabels:  # Correspondance d'étiquettes
+      env: production-db  # Sélectionne les pods avec l'étiquette "env" ayant la valeur "production-db"
+  template:  # Modèle pour créer de nouveaux pods
+    metadata:  # Métadonnées du pod
+      name: mydb-pod  # Nom du pod
+      labels:  # Étiquettes du pod
+        env: production-db  # Étiquette "env" avec la valeur "production-db"
+    spec:  # Spécifications du pod
+      containers:  # Définition des conteneurs dans le pod
+        - name: database  # Nom du conteneur
+          image: kha458/dbe-mysql-7.8:01  # Image Docker utilisée pour le conteneur
+          
